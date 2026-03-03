@@ -80,8 +80,7 @@ def UpdateData():
         AGE.set("")
         ADDRESS.set("")
         CONTACT.set("")
-        
-    
+           
 def OnSelected(event):
     global mem_id, UpdateWindow
     curItem = tree.focus()
@@ -233,16 +232,11 @@ def AddNewWindow():
     contact = Entry(ContactForm, textvariable=CONTACT,  font=('arial', 14))
     contact.grid(row=5, column=1)
     
-
-    #==================BUTTONS==============================
+ #==================BUTTONS==============================
     btn_addcon = Button(ContactForm, text="Save", width=50, command=SubmitData)
     btn_addcon.grid(row=6, columnspan=2, pady=10)
-
-
-
-
-    
-#============================FRAMES======================================
+   
+#============================FRAMES======================
 Top = Frame(root, width=500, bd=1, relief=SOLID)
 Top.pack(side=TOP)
 Mid = Frame(root, width=500,  bg="#6666ff")
@@ -255,11 +249,11 @@ MidRight = Frame(Mid, width=100)
 MidRight.pack(side=RIGHT, pady=10)
 TableMargin = Frame(root, width=500)
 TableMargin.pack(side=TOP)
-#============================LABELS======================================
+#============================LABELS========================
 lbl_title = Label(Top, text="Contact Management System", font=('arial', 16), width=500)
 lbl_title.pack(fill=X)
 
-#============================ENTRY=======================================
+#============================ENTRY===========================
 
 #============================BUTTONS=====================================
 btn_add = Button(MidLeft, text="+ ADD NEW", bg="#66ff66", command=AddNewWindow)
